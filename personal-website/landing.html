@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!---CUSTOM FONT--->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coda+Caption&family=Fjalla+One&family=Nerko+One&family=Permanent+Marker&family=Quicksand:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&family=Sarpanch:wght@700&family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>&#x263D Eesha Thaker</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="jscript" href="jscript.js">
+  <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+
+<body style="margin: 0; position: relative">
+  <img class="bg-img" src="imgs/city-landscape.JPG" alt="">
+<!---NAV BAR--->
+<div id="nav-bar">
+  <a class="link" href="landing.html"><ul class="nav-elem">Home</ul></a>
+  <a class="link" href="#about-bg"><ul class="nav-elem">About</ul></a>
+  <a class="link" href="blog.html"><ul class="nav-elem">Blog</ul></a>
+  <a class="link" href="code.html"><ul class="nav-elem">Code</ul></a>
+  <a class="link" href="teach.html"><ul class="nav-elem">Teach</ul></a>
+</div>
+<div class="hamburger" style="float: right; margin-right: 2%;">
+  <button onclick="buttonClick()" class="nav-button">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </button>
+</div>
+<div class="nav-button-options", style="display: none">
+  <a class="link" href="landing.html"><ul class="nav-button-elem">Home</ul></a>
+  <a class="link" href="#about-bg"><ul class="nav-button-elem">About</ul></a>
+  <a class="link" href="blog.html"><ul class="nav-button-elem">Blog</ul></a>
+  <a class="link" href="code.html"><ul class="nav-button-elem">Code</ul></a>
+  <a class="link" href="teach.html"><ul class="nav-button-elem">Teach</ul></a>
+</div>
+<script>
+    const navBar = document.getElementById("nav-bar");
+    const navButton = document.querySelector(".nav-button");
+    const navOptions = document.querySelector(".nav-button-options");
+    function addButton() {
+        if (window.innerWidth <= 800) {
+            navBar.style.display = "none";
+            navButton.style.display = "flex";
+        } else {
+            navBar.style.display = "flex";
+            navButton.style.display = "none";
+            navOptions.style.display = "none";
+
+
+        }
+    }
+      function buttonClick() {
+          const navOptions = document.querySelector(".nav-button-options");
+          if (navOptions.style.display == "none") {
+              navOptions.style.display = "flex";
+          } else if (navOptions.style.display == "flex") {
+              navOptions.style.display = "none";
+          }
+      }
+
+    window.addEventListener("load", function() {
+        addButton();
+    });
+    window.addEventListener("resize", function() {
+        addButton();
+    });
+
+</script>
+<!---LANDING PAGE--->
+    <div class="intro-wrapper">
+      <div class="profile-pic">
+        <img src="imgs/pfp-bw-3.JPG" class="intro-img">
+      </div>
+      <div class="resized-elems">
+        <div class="typing-container">
+          <span class="time-landing" id="lblGreetings"></span>
+          <span class="input-cursor">|</span>
+        </div>
+        <h1 class="eesha">I'm Eesha Thaker.</h1>
+        <h3 class="intro-bio">
+          <em>I'm a math student, software developer, and aspiring quant researcher.</em>
+        </h3>
+      </div>
+
+      <script>
+          //Time change function
+          var myDate = new Date();
+          var hrs = myDate.getHours();
+          var greet;
+
+          if (hrs < 12)
+              greet = 'Good Morning!';
+          else if (hrs >= 12 && hrs <= 16)
+              greet = 'Good Afternoon!';
+          else if (hrs >= 17 && hrs <= 24)
+              greet = 'Good Evening!';
+
+          //Typing function
+          var textPosition = 0;
+          var speed = 200;
+
+          typewriter = () => {
+              var input = document.getElementById("lblGreetings");
+              input.innerText = greet.substring(0, textPosition);
+
+              if (textPosition++ != greet.length) {
+                  setTimeout(typewriter, speed);
+              }
+          }
+          window.addEventListener("load", typewriter);
+      </script>
+      <div class="para-bkg">
+        <p class="intro-para" id="top">Currently...</p>
+        <a class="link" href="blog.html"><p class="intro-para">&#128218 Studying Applied Mathematics and Computer Science @ UC Berkeley</p></a>
+        <a class="link" href="code.html"><p class="intro-para">&#128187 Contributing to open source projects and building full stack developments in quant & quant-adjacent spaces</p></a>
+        <a class="link" href="teach.html"><p class="intro-para">&#128221 Teaching data structures & algorithms principles, and leading a CS tutoring group
+        </p></a>
+        <a class="link" href="teach.html"><p class="intro-para"> &#127775 Spearheading financial literacy intiatives to empower women and non-binary folks
+        </p></a>
+        <a class="link" href="blog.html"><p class="intro-para" id="bottom">&#128200 Giving my take about what's going on in the blockchain, fintech, and trading spaces
+        </p></a>
+      </div>
+    </div>
+    <!----SELECTED WORKS---->
+    <div id="works-wrapper">
+      <div style="display: block">
+        <div class="works-intro">
+        <span id="works"></span>
+        <span id="input-cursor">|</span>
+        </div>
+        <div class="work-descr">
+          <p>Insert text here; full description coming soon! </p>
+        </div>
+      </div>
+        <script>
+            var textPos = 0;
+            var message = "Projects and Experiences: "
+            var input = document.getElementById("works");
+
+            typewriter2 = () => {
+                input.innerText = message.substring(0, textPos);
+                if (textPos++ != message.length) {
+                    setTimeout(typewriter2, 200);
+                }
+            }
+            window.addEventListener("scroll", function () {
+                newElem = document.getElementById("works-bg");
+                if (window.scrollY > 600) {
+                    typewriter2();
+                }
+            });
+        </script>
+
+      <div class="selected-works" id="work-1">
+        <h4 class="work-title">Title</h4>
+        <p class="work-descr"></p>
+        <div class="work-img"></div>
+      </div>
+      <div class="selected-works" id="work-2">
+        <h4 class="work-title">Title</h4>
+        <p class="work-descr"></p>
+        <div class="work-img"></div>
+      </div>
+      <div class="selected-works" id="work-3">
+        <h4 class="work-title">Title</h4>
+        <p class="work-descr"></p>
+        <div class="work-img"></div>
+      </div>
+      <div class="selected-works" id="work-4">
+        <h4 class="work-title">Title</h4>
+        <div class="work-descr"></div>
+        <div class="work-img"></div>
+      </div>
+        <script>
+          function resizeWindow() {
+              if (window.innerWidth <= 800) {
+
+                  document.querySelector(".work-descr").style.maxWidth = "80%";
+                  document.querySelector(".para-bkg").style.marginLeft = "5%";
+                  document.querySelector(".para-bkg").style.marginTop = "25%";
+
+                  var title = document.querySelector(".work-title");
+                  var descr = document.querySelector(".work-descr");
+                  var img = document.querySelector(".work-img");
+
+                  title.classList.replace(".work-title", ".resized-work-title");
+                  descr.classList.replace(".work-descr", ".resized-work-descr");
+                  img.classList.replace(".work-img", ".resized-work-img");
+              }
+
+              else {
+                  document.querySelector(".work-descr").style.maxWidth = "80%";
+                  document.querySelector(".para-bkg").style.marginLeft = "53%";
+                  document.querySelector(".para-bkg").style.marginTop = "0%";
+              }
+          }
+
+          window.addEventListener("load", function() {
+            resizeWindow()
+          });
+          window.addEventListener("resize", function() {
+              resizeWindow()
+          });
+
+        </script>
+    </div>
+    <!----FOOTER---->
+<div class="footer-wrapper">
+  <div style="text-align: center">
+    <h2 class="footer-note">Let's get in touch.</h2>
+    <p class="footer-para">I love meeting new people, and you're no exception. If you find anything
+      here that interests, inspires, or intrigues you, please reach out! </p>
+  </div>
+  <div class="socials">
+      <a class="link linkedin" href="https://www.linkedin.com/in/eesha-thaker-38708222a/">
+        <i style="font-size:24px" class="fa">&#xf0e1;</i>
+      </a>
+      <a class="link gmail" href="mailto:ethaker@berkeley.edu">
+        <i style="font-size:24px" class="fa">&#xf0e0;</i>
+      </a>
+    <a class="link github" href="https://github.com/ethaker">
+      <i style="font-size:24px" class="fa">&#xf09b;</i>
+    </a>
+    </div>
+  <h6 style="font-family:'Roboto-Mono', monospace;">Made with love from Berkeley, CA</h6>
+</div>
+
+
+</body>
+</html>

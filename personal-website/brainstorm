@@ -1,0 +1,48 @@
+What to include:
+- transform landing page after scroll to about page
+- sticky nav bar
+- typed animation for each page (javascript error???)
+
+what to include in about:
+- summary/paragraph with motivation about website
+- api to resume
+- footer with contact info/credits (coded with love, etc)
+
+Tabs to different pages (to do over break!)
+Coding Projects <To do over break-- need major development here over break>
+    - Poker AI (Longer term -- second sem + summer) --> WANT DONE BY SUMMER
+    FOR JUNIOR YEAR RECRUITING
+    - So you tested positive... what are the chances that you actually have COVID?
+        Determining with Bayesian Inference
+        Need data from different tests/use API to see covid rates in different areas?
+        variables: where you live, what test you use,
+    - Data science projects (second sem + summer) --> WANT DONE BY SUMMER FOR JUNIOR
+    YEAR RECRUITING
+Teaching <Work in progress, need to brainstorm more>
+    - CSM section summary
+    - TA section summary/teaching materials?
+    - DeCal website/mission summary
+Blog <to do over break>
+- Not sure how to structure yet
+- indepedent page-- want hyperlinks (table of context on side)
+- content with stuff i write about finance, and book blogs
+
+Need to demonstrate some kind of backend integration
+
+
+
+Bio:
+
+Welcome to my space, and thank you for taking the time to be here! I'm a second-year student at UC
+Berkeley with a strong interest in discrete mathematics, and all forms of market performance predictors.
+    <Smaller/side bio: I used fail my math tests. Check out my blog to read about how I got here.>
+
+I like to teach, and I'm currently enjoying positions as a junior mentor and backend developer for UC Berkeley's largest student-run tutoring organization. <include link to CSM here>
+I'm also a uGSI for UC Berkeley's Discrete Mathematics and Probability Theory course <include link to
+CS70>. You can find more information about my teaching portfolio here.
+
+I'm currently spending a lot of my time <include club info and mission> OR <include research info and mission>.
+
+This page is meant to act as a catch-all portfolio for projects I am working on, my sources of inspiration, and
+a place to post my thoughts and reactions. I hope you find something thought provoking in your time here.
+
